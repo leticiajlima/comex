@@ -3,6 +3,8 @@ package br.com.alura.comex.semana08;
 import br.com.alura.comex.semana07.Cliente;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Pedido {
     private String categoria;
@@ -31,7 +33,7 @@ public class Pedido {
         return produto;
     }
 
-    public String getCliente() {
+    public Cliente getCliente() {
         return cliente;
     }
 
@@ -46,6 +48,23 @@ public class Pedido {
     public LocalDate getData() {
         return data;
     }
+
+    public double calcularTotal(){
+        return preco * quantidade;
+    }
+
+    public static Pedido encontraPedidoMaisCaro(ArrayList<Pedido> pedidos) {
+        return pedidos.stream()
+                .max(Comparator.comparingDouble(Pedido::getPreco))
+                .orElse(null);
+    }
+
+    public static Pedido encontraPedidoMaisBarato(ArrayList<Pedido> pedidos) {
+        return pedidos.stream()
+                .min(Comparator.comparingDouble(Pedido::getPreco))
+                .orElse(null);
+    }
+
 
     @Override
     public String toString() {
