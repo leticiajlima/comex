@@ -1,14 +1,13 @@
-package br.com.alura.comex.semana08;
+package br.com.alura.comex.executaveis;
 
-import br.com.alura.comex.semana07.Cliente;
-import br.com.alura.comex.semana08.Pedido;
-import br.com.alura.comex.semana07.Produto;
+import br.com.alura.comex.modelos.Cliente;
+import br.com.alura.comex.modelos.Pedido;
+import br.com.alura.comex.modelos.Produto;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.List;
 
 public class TestaPedidoOrdenado {
     public static void main(String[] args) {
