@@ -7,8 +7,15 @@ public class Cliente {
     private String telefone;
     private Endereco endereco;
 
+    public Cliente() {
+
+    }
+
     public String getNome() {
         return nome;
+    }
+
+    public Cliente(String nome, String email) {
     }
 
     public void setNome(String nome) {

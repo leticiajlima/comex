@@ -1,7 +1,7 @@
-package br.com.alura.comex.semana08;
-
-import br.com.alura.comex.semana07.Cliente;
-import br.com.alura.comex.semana07.Produto;
+package br.com.alura.comex.executaveis;
+import br.com.alura.comex.modelos.Pedido;
+import br.com.alura.comex.modelos.Cliente;
+import br.com.alura.comex.modelos.Produto;
 import ch.qos.logback.core.net.server.Client;
 
 import javax.xml.crypto.Data;
